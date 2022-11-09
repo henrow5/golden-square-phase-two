@@ -11,15 +11,10 @@ I want to see an estimate of reading time for a text, assuming that I can read 2
 _Include the name of the method, its parameters, return value, and side effects._
 
 ```ruby
-# EXAMPLE
+reading_time = reading_time(text)
 
-# `extract_upper` extracts uppercase words from a string
-uppercase_words = extract_uppercase(mixed_words)
-
-mixed_words: a string (e.g. "hello WORLD")
-uppercase_words: a list of strings (e.g. ["WORLD"])
-
-# The method doesn't print anything or have any other side-effects
+# text: string containing the words 
+# reading_time: integer representing the minutes
 ```
 
 ## 3. Create Examples as Tests
@@ -27,15 +22,23 @@ uppercase_words: a list of strings (e.g. ["WORLD"])
 _Make a list of examples of what the method will take and return._
 
 ```ruby
-# EXAMPLE
+# 1
+calculate_reading_time('') => 0 
 
-extract_uppercase("hello WORLD") => ["WORLD"]
-extract_uppercase("HELLO WORLD") => ["HELLO", "WORLD"]
-extract_uppercase("hello world") => []
-extract_uppercase("hello WoRLD") => []
-extract_uppercase("hello WORLD!") => ["WORLD"]
-extract_uppercase("") => []
-extract_uppercase(nil) throws an error
+# 2 
+calculate_reading_time('one') => 1 
+
+# 3
+calculate_reading_time(TWO_HUNDERED_WORDS) => 1
+
+# 4
+calculate_reading_time(THREE_HUNDRED_WORDS) => 2 
+
+# 5
+calculate_reading_time(FOUR_HUNDRED_WORDS) => 2 
+
+# 6
+calculate_reading_time(FIVE_THOUSAND_WORDS) => 25 
 ```
 
 _Encode each example as a test. You can add to the above list as you go._
