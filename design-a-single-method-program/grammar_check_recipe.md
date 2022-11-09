@@ -15,7 +15,7 @@ _Include the name of the method, its parameters, return value, and side effects.
 is_correct = grammar_check(text)
 
 # text: string containing the words 
-# is_correct: is a boolean 
+# is_correct: boolean 
 ```
 
 ## 3. Create Examples as Tests
