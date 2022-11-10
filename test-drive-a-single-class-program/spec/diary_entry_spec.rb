@@ -1,6 +1,6 @@
 require "diary_entry"
 
-describe "DiaryEntry" do
+describe DiaryEntry do
   it "creates" do
     entry = DiaryEntry.new("title_one", "contents_one")
     expect(entry.title).to eq "title_one"
